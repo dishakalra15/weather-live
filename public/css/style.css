@@ -1,0 +1,285 @@
+*{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+:root
+{
+    --main-bg : #1e272e;
+    --main-color :#0097e6
+}
+html{
+     font-size: 62.57; /* responsive 1 rem =10pixel */
+}
+body{
+    height: 100vh; /*vh=veiwport height*/
+    background-color: #f0f4f7;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.row
+{
+    margin: 0;
+}
+
+.main_menu
+{
+    background-color: var(--main-bg);
+}
+
+.navbar
+{
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;/*  2 rem=20 pixel  */
+
+}
+.navbar li{
+    margin-left: 2rem;
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.navbar a:hover{
+    color:var(--main-color)
+}
+.navbar-toggler
+{
+    background-color: grey;
+
+}
+
+.fa-snowflake
+{
+    transition: all linear;
+    animation: rot 2s infinite;
+    color: var(--main-color);
+}
+
+/* animation lagane ke liye prefix lagana matt bhoolna */
+@keyframes rot{
+    /* 0% gives multiple options vrna from se to bhi likh skte */
+    /* 0% 1 gives jab 0deg pe  and 2nd gives when 360 degree par */
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    0%
+    {
+        transform: rotate(360deg);
+    }
+
+}
+
+.main_header_left
+{
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.main_header_left p{
+    font-size: 2rem;
+}
+
+.main_header_left h1{
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+
+.main_header_left text_col
+{
+    color: var(--main-color);
+}
+
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+}
+.main_header_left button:hover
+{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+
+.main_header_right
+{
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    outline: none;
+
+}
+.date-container{
+    font-weight: 100;
+    font-size: 30px;
+    margin-left: 20px;
+    
+}
+
+
+
+#search-form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#temp
+{
+text-align: center;
+}
+
+#temp #temp-unit
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+#temp #temp-value
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    
+}
+#climate
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+#location
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
+
+#temp-icon
+{
+    margin: 1rem;
+    width: 40%;
+    height: auto;
+}
+
+
+main{
+
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #6b778d;
+    border-radius: 20px;
+    width: 360px;
+    height: 360px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 20px 10px rgba(112, 102, 102, 0.2);
+
+}
+
+
+#search-button
+{
+    color: #494949;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 11px;
+    border: 2px solid #494949;
+    display: inline-block;
+    transition: all 0.4 ease 0s;
+}
+#search-button:hover{
+
+color: #ffffff;
+background: #ff6768;
+border-color: #ff6768;
+transition: all 0.4s ease 0s;
+
+
+
+}
+
+#search-input
+{
+    width: 260px;
+    overflow: hidden;
+    font-size: 20px;
+    margin: 8px 0;
+    padding: 8px 0;
+    border-bottom: 3px solid #ff6768;
+    color: black;
+    outline: none;
+    background: none;
+}
+input
+{
+    border: none;
+}
+
+#lol
+{
+    margin: 0; /*paragraph khud bhi margin leta hai */
+    text-align: center;
+    color: var(--main-bg);
+    line-height: 4rem;
+    font-size: 1.4rem;
+}
+
+
+  
+/*footer*/
+footer
+{
+    width: 100%;
+    background-color: var(--main-bg);
+    
+    margin-top: auto; /* after using flex in body we put margin top auto toh footer aways stays at bottom*/
+}
+
+footer p{
+     margin: 0; /*paragraph khud bhi margin leta hai */
+     text-align: center;
+     color: #fff;
+     line-height: 4rem;
+     font-size: 1.4rem;
+}
+/* responsive code */
+@media(max-width:768px)
+{
+    .main_header_left
+    {
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right
+    {
+        height: auto;
+        margin-top: 3rem ;
+    }
+    
+}

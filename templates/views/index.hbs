@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerlinks}}
+</head>
+<body>
+ {{>navbar}}
+    <!-- main header -->
+
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <!-- left side div -->
+                    <div class ="col-md-6 col-12 main_header_left">
+                        <p>Welcome</p>
+                        <h1>Get the latest <span class="text_col   ">weather</span> information of any city</h1>
+                        <a href="/weather"><button>check now </button></a>
+
+                    </div>
+                    <!-- right side div -->
+                    <div class ="col-md-6 col-12 main_header_right">
+                        <div class="container">
+        Current time is <span id="time"></span>
+    </div>
+    <script>
+        console.log("This is date and time tutorial");
+        let now = new Date();
+        console.log(now);
+
+        let dt = new Date(1000);
+        console.log(dt);
+
+        // let newDate = new Date("2029-09-30");
+        // console.log(newDate)
+
+        // let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+        let newDate = new Date(3020, 4, 6, 9, 3, 2, 34);
+        console.log(newDate);
+
+        let yr = newDate.getFullYear();
+        console.log("The year is ", yr);
+
+        let dat = newDate.getDate();
+        console.log("The date is ", dat);
+
+        let month = newDate.getMonth();
+        console.log("The month is ", month);
+
+        let hours = newDate.getHours();
+        console.log("The hours is ", hours);
+
+        newDate.setDate(8);
+        newDate.setMinutes(29);
+        console.log(newDate)
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+            time.innerHTML = new Date();
+        }
+
+    </script>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="future-forecast">
+        <div class="today" id="current-temp">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="other">
+                <div class="day">Monday</div>
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+        </div>
+
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-forecast-item">
+                <div class="day">Tue</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Wed</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Thur</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Fri</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Sat</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+
+        </div>
+    </div>
+
+    {{>footer}}
+    
+    <script src="main.js">
+
+    </script>
+</body>
+</html>
